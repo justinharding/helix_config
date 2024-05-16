@@ -32,6 +32,7 @@ display-inlay-hints = true
 
 [editor.statusline]
 left = ["mode", "spinner", "version-control", "file-name"]
+right = ["diagnostics", "selections", "position", "position-percentage", "file-encoding"]
 
 [keys.insert]
 "C-[" = "normal_mode"
