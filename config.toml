@@ -44,6 +44,16 @@ A-x = "extend_to_line_bounds"
 "]" = { b = "goto_next_buffer" }
 "[" = { b = "goto_previous_buffer" }
 
+[keys.normal.g]
+l = ["collapse_selection", "extend_to_line_end"]
+h = ["collapse_selection", "extend_to_line_start"]
+s = ["collapse_selection", "select_mode", "goto_first_nonwhitespace", "exit_select_mode"]
+
+[keys.normal." ".W]
+s = ":set whitespace.render all"
+h = ":set whitespace.render none"
+
 [keys.select]
 X = ["extend_line_up", "extend_to_line_bounds"]
-A-x = "extend_to_line_bounds" # "A-f" = "format"
+A-x = "extend_to_line_bounds"
+# "A-f" = "format"
