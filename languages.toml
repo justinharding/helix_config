@@ -44,3 +44,8 @@ args = ["up", "--method", "stdio"]
 [[language]]
 name = "sql"
 language-servers = [ "sql-language-server" ]
+
+[[language]]
+name = "graphql"
+indent = { tab-width = 4, unit = "    "}
+
