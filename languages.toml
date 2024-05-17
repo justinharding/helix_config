@@ -25,6 +25,9 @@ args = ["--line-length", "88", "--quiet", "-"]
 name = "markdown"
 formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}
 
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
