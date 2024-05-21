@@ -24,6 +24,17 @@ args = ["--line-length", "88", "--quiet", "-"]
 [[language]]
 name = "markdown"
 formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}
+# formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+
+# [[language]]
+# name = "rust"
+# language-servers = ["rust-analyzer"]
+# scope = "source.rust"
+# injection-regex = "rust"
+# file-types = ["rs"]
+# comment-token = "//"
+# indent = { tab-width = 4, unit = "	"}
+# auto-format = true
 
 [language-server.rust-analyzer.config.check]
 command = "clippy"
@@ -35,6 +46,10 @@ formatter = { command = "taplo", args = ["fmt", "-"] }
 [language-server.yaml-language-server.config.yaml]
 format = { enable = true }
 validation = true
+
+# [[language]]
+# name = "json"
+# formatter = { command = 'prettier', args = ["--parser", "json"] }
 
 [language-server.yaml-language-server.config.yaml.schemas]
 "https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"

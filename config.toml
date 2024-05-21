@@ -31,11 +31,28 @@ display-messages = true
 display-inlay-hints = true
 
 [editor.statusline]
-left = ["mode", "spinner", "version-control", "file-name"]
+left = ["mode", "spinner", "version-control", "file-name", "file-modification-indicator"]
 right = ["diagnostics", "selections", "position", "position-percentage", "file-encoding"]
 
+# Whitespace settings and symbols
+# + (*whiteline) types : when to render
+[editor.whitespace.render]
+tab = "all"
+tabpad = "all"
+# newline = "none"
+
+# Editor filepicker settings
+# + hidden : show hidden files
+[editor.file-picker]
+hidden = false
+
 [keys.insert]
+"A-h" = "move_char_left" # Alt-h moves cursor up
+"A-l" = "move_char_right" # Alt-l moves cursor right
+"A-k" = "move_line_up" # Alt-k moves cursor up
+"A-j" = "move_line_down" # Alt-j moves cursor down
 "C-[" = "normal_mode"
+# j = { k = "normal_mode" } # jk to enter Normal mode
 
 [keys.normal]
 # ";" = "repeat_last_motion"
