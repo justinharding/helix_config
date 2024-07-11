@@ -20,6 +20,9 @@ args = ["--ignore", "E501"]
 command = "black"
 args = ["--line-length", "88", "--quiet", "-"]
 
+# [[language]]
+# name = "json"
+# config = { "provideFormatter" = true, "json" = { "keepLines" = { "enable" = true } } }
 
 [[language]]
 name = "markdown"
